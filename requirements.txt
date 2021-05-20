@@ -1,5 +1,5 @@
 emoji==1.2.0
-mecab-python3==0.996.5
+mecab-python3
 oseti==0.2
 tweepy==3.10.0
 unidic-lite

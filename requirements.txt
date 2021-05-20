@@ -2,3 +2,4 @@ emoji==1.2.0
 Janome==0.4.1
 oseti==0.2
 tweepy==3.10.0
+unidic-lite

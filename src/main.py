@@ -11,7 +11,7 @@ follow_back()
 # フォロー外した人はフォロー外す
 unfollow()
 
-json_open = open('./data/data.json', 'r')
+json_open = open('./src/data/data.json', 'r')
 json_load = json.load(json_open)
 latest_tweet_id = json_load["latest_tweet_id"]
 for index, tweet in enumerate(fetch_tweet(count=200, since_id=latest_tweet_id, exclude_replies=True, include_rts=False)):
@@ -36,5 +36,5 @@ for index, tweet in enumerate(fetch_tweet(count=200, since_id=latest_tweet_id, e
         reply_good_people(tweet)
         user_info["negative_count"] = 0
     json_load[user_id] = user_info
-with open('./data/data.json', mode='wt', encoding='utf-8') as file:
+with open('./src/data/data.json', mode='wt', encoding='utf-8') as file:
     json.dump(json_load, file, ensure_ascii=False, indent=4)

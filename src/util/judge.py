@@ -23,7 +23,11 @@ def is_popular_tweet(tweet, user_information):
 def is_bad_word_for_people(tweet, user_information):
     text = tweet.text
     is_negative_tweet = False
-    analyze_result = analyzer.analyze(text)
+    try:
+        analyze_result = analyzer.analyze(text)
+    except:
+        print("Tweetの解析に失敗しました。")
+        return False
     print("結果:{} 文章:{}".format(analyze_result, text))
     if ((sum(analyze_result) / len(analyze_result)) <= -0.9):
         is_negative_tweet = True

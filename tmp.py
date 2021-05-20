@@ -18,7 +18,7 @@ def _analyze_by_mecab(line, mecab_args):
         line = line.rstrip()
         if line == 'EOS':
             break
-        print(line)
+        print(line.split('\t'))
         (surface, features) = line.split('\t')
 
         if (features.startswith('記号,一般,')

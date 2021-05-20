@@ -50,7 +50,11 @@ def is_outliers(tweet, user_information):
 
 def is_positive_word(tweet):
     text = tweet.text
-    analyze_result = analyzer.analyze(text)
+    try:
+        analyze_result = analyzer.analyze(text)
+    except:
+        print("Tweetの解析に失敗しました。")
+        return False
     if ((sum(analyze_result) / len(analyze_result)) >= 0.9):
         return True
     return False

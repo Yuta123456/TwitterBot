@@ -1,5 +1,4 @@
 emoji==1.2.0
 mecab-python3
-mecab-python-windows==0.996.3
 oseti==0.2
 tweepy==3.10.0

@@ -38,3 +38,4 @@ for index, tweet in enumerate(fetch_tweet(count=200, since_id=latest_tweet_id, e
     json_load[user_id] = user_info
 with open('./src/data/data.json', mode='wt', encoding='utf-8') as file:
     json.dump(json_load, file, ensure_ascii=False, indent=4)
+    print("データの保存が完了しました。")

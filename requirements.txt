@@ -1,5 +1,4 @@
 emoji==1.2.0
 Janome==0.4.1
-mecab==0.996.2
 oseti==0.2
 tweepy==3.10.0
